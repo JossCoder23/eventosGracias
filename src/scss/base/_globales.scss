@@ -1,0 +1,22 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    // overflow: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: v.$fuente_cambria;
+    position: relative;
+    // overflow-x: hidden;
+}
+
+h1, h2, h3, h4, a, p, span {
+    font-family: v.$fuente_cambria;
+}

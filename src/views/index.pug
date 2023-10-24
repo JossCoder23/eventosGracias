@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Eventos Cayetano Gracias
+        link(rel="stylesheet", href="./css/app.css")
+    body
+        main.graciasContainer
+            section.graciasDescription
+                .graciasDesCont
+                    .descriptionLogo
+                    .descriptionText
+                    .descriptionParrafo
+                        h3 Nos comunicaremos para brindate la información.
+                            br
+                            | También puedes escribirnos por nuestro whatsapp.
+                    .descriptionButton
+                        button.descriptionButton__button
+                            .descriptionButton__image
+                            .descriptionButton__text
+                                h3 CONVERSA CON UN ASESOR
+            section.graciasImage
+                img(src="img/thanks_high.webp", alt="")
+        .graciasDesktop
+        script(src="./js/script.js" async)
+        script.
+            if( screen.width >= 1000 ) {
+                var script = document.querySelector('script[src="./js/script.js"]')
+                script.parentNode.removeChild(script);
+            }
+            

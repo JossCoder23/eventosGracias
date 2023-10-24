@@ -1,0 +1,234 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.graciasContainer {
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+    @include m.desktop_1020 {
+        display: none;
+    }
+}
+
+.graciasDesktop {
+    background-color: red;
+    height: 100vh;
+    display: grid;
+}
+
+.graciasDescription {
+    // height: 68%;
+    height: 33rem;
+    width: 100%;
+    z-index: 10;
+    background-color: v.$primario;
+    position: relative;
+    top: 0;
+    // display: flex;
+    // align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7.5rem), 0% calc(100% - 5rem));
+    @include m.phone_360 {
+        height: 43rem;
+    }
+    @include m.phone_412 {
+        height: 47rem;
+    }
+    @include m.phone_ios12pro_428 {
+        height: 45rem;
+    }
+    @include m.tablet_760 {
+        height: 60rem !important;
+    }
+    @include m.tablet_800 {
+        height: 75rem !important;
+    }
+}
+
+.graciasDesCont {
+    // background-color: green;
+    height: 78%;
+    width: 100%;
+    display: grid;
+    position: relative;
+    // background-color: green;
+    @include m.phone_360 {
+        height: 90%;
+    }
+}
+
+.graciasImage {
+    top: -12rem;
+    position: relative;
+    bottom: 0;
+    height: 28rem;
+    width: 100%;
+    @include m.phone_360 {
+        top: -10rem;
+        height: 37rem;
+    }
+    @include m.tablet_800 {
+        height: 61.5rem !important;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.descriptionLogo {
+    // background-color: red;
+    height: 4rem;
+    width: 100%;
+    position: absolute;
+    // top: 3.5rem;
+    top: 1.5rem;
+    background: center/contain no-repeat url(../img/logo_gracias.webp);
+    // @include m.phone_360 {
+    //     top: 4rem;
+    // }
+}
+
+.descriptionText {
+    // height: 3.5rem;
+    // top: 6.7rem;
+    height: 2.8rem;
+    top: 7rem;
+    width: 100%;
+    position: absolute;
+    background: center/contain no-repeat url(../img/gracias.svg);
+    // @include m.phone_360 {
+    //     top: 6.5rem;
+    //     height: 3.5rem;
+    // }
+    // @include m.phone_iosx_375 {
+    //     top: 7rem;
+    // }
+    // @include m.phone_ios12_390 {
+    //     top: 8rem;
+    // }
+}
+
+.descriptionParrafo {
+    height: 9rem;
+    position: absolute;
+    // top: 8rem;
+    top: 10rem;
+    // background-color: red;
+    // @include m.phone_360 {
+    //     top: 7rem;
+    // }
+    // @include m.phone_iosx_375 {
+    //     top: 8rem;
+    // }
+    // @include m.phone_ios12_390 {
+    //     top: 9.5rem;
+    // }
+    h3 {
+        font-family: v.$fuente_wsMedium;
+        color: white;
+        font-size: 1.4rem;
+        padding: 0 5rem;
+        text-align: center;
+        // line-height: 1.5;
+        line-height: 1.3;
+        @include m.phone_360 {
+            line-height: 1.5;
+            font-size: 1.6rem;
+            padding: 0 6rem;
+        }
+        @include m.phone_iosx_375 {
+            padding: 0 7rem;
+        }
+        @include m.phone_412 {
+            font-size: 1.8rem;
+            padding: 0 8rem;
+        }
+        @include m.tablet_760 {
+            font-size: 2.3rem;
+            padding: 0 21rem;
+        }
+        @include m.tablet_800 {
+            font-size: 2.6rem;
+        }
+    }
+}
+
+.descriptionButton {
+    // background-color: yellow;
+    position: absolute;
+    // top: 10.3rem;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.8rem;
+    width: 100%;
+    @include m.tablet_760 {
+        height: 4.5rem;
+        bottom: 1.5rem !important;
+    }
+    @include m.tablet_800 {
+        height: 5.5rem;
+    }
+    // @include m.phone_360 {
+    //     top: 10rem;
+    // }
+    // @include m.phone_iosx_375 {
+    //     top: 11.5rem;
+    // }
+    // @include m.phone_ios12_390 {
+    //     top: 13.4rem;
+    // }
+}
+
+.descriptionButton__button {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 0 1rem 0 1.5rem;
+    height: 100%;
+    border: none;
+    background-color: v.$secundario;
+    border-radius: .7rem;
+    @include m.phone_360 {
+        padding: 0 1rem 0 2rem;
+    }
+    @include m.phone_412 {
+        width: 55%;
+    }
+    @include m.tablet_760 {
+        width: 34%;
+    }
+    @include m.tablet_800 {
+        padding: 0 1rem 0 2.5rem;
+        width: 35%;
+    }
+}
+
+.descriptionButton__image {
+    height: 100%;
+    background-color: red;
+    background: center/contain no-repeat url(../img/whatsapp_black.svg);
+}
+
+.descriptionButton__text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-family: v.$fuente_wsMedium;
+        @include m.phone_iosx_375 {
+            font-size: 1.1rem;
+        }
+        @include m.tablet_760 {
+            font-size: 1.3rem;
+        }
+    }
+}

@@ -35,6 +35,24 @@
     }
 }
 
+@mixin height_1080 {
+    @media (min-height: v.$height_1080){
+        @content;
+    }
+}
+
+@mixin height_1260 {
+    @media (min-height: v.$height_1260){
+        @content;
+    }
+}
+
+@mixin height_1440 {
+    @media (min-height: v.$height_1440){
+        @content;
+    }
+}
+
 // @mixin height_tablet {
 //     @media (min-height: v.$height_tablet){
 //         @content;
@@ -608,6 +626,24 @@
 
 @mixin desktop_2000 {
     @media (min-width: v.$desktop_2000) {
+        @content;
+    }
+}
+
+@mixin desktop_2240 {
+    @media (min-width: v.$desktop_2240) {
+        @content;
+    }
+}
+
+@mixin desktop_2304 {
+    @media (min-width: v.$desktop_2304) {
+        @content;
+    }
+}
+
+@mixin desktop_2560 {
+    @media (min-width: v.$desktop_2560) {
         @content;
     }
 }

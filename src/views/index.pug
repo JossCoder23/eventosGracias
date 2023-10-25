@@ -24,10 +24,27 @@ html(lang="en")
             section.graciasImage
                 img(src="img/thanks_high.webp", alt="")
         .graciasDesktop
+            .graciasDesktopContainer
+                .graciasDesktopContainer__left 
+                    .leftContainer
+                        .left_logo
+                        .left_svg 
+                        .left_parraf
+                            h3 Nos comunicaremos para brindate la información.
+                                br
+                                | También puedes escribirnos por nuestro whatsapp.
+                        .left_button
+                            button.left_button_bottom
+                                .descriptionButton__image
+                                .descriptionButton__text
+                                    h3 CONVERSA CON UN ASESOR
+                .graciasDesktopContainer__right
+                    img(src="img/gracias_desktop.webp", alt="")
         script(src="./js/script.js" async)
         script.
             if( screen.width >= 1000 ) {
-                var script = document.querySelector('script[src="./js/script.js"]')
-                script.parentNode.removeChild(script);
+                var script = document.querySelector('script');
+                var scriptDelete = document.querySelectorAll('script')[0];
+                script.parentNode.removeChild(scriptDelete);
             }
             

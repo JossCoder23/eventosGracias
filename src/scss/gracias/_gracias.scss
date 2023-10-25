@@ -14,12 +14,6 @@
     }
 }
 
-.graciasDesktop {
-    background-color: red;
-    height: 100vh;
-    display: grid;
-}
-
 .graciasDescription {
     // height: 68%;
     height: 33rem;
@@ -232,3 +226,191 @@
         }
     }
 }
+
+
+.graciasDesktop {
+    display: none;
+    @include m.desktop_1020 {
+        // background-color: red;
+        height: 100vh;
+        display: grid;
+    }  
+}
+
+.graciasDesktopContainer {
+    display: grid;
+    // background-color: green;
+    grid-template-columns: 50% 50%;
+    overflow: hidden;
+    @include m.desktop_1920 {
+        grid-template-columns: 40% 60%;
+    }
+}
+// clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7.5rem), 0% calc(100% - 5rem));
+.graciasDesktopContainer__left {
+    background-color: v.$primario;
+    clip-path: polygon(0% 0%, 100% 0%, calc(100% - 9rem) 100%, 0% 100%);
+}
+
+.leftContainer {
+    // background-color: red;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20% 30% 35% 15%;
+    padding: 5rem 12rem 5rem 3rem;
+    @include m.desktop_1920 {
+        height: 73%;
+        padding: 5rem 10rem 5rem 6rem;
+        @include m.height_1080 {
+            height: 82%;    
+        }
+    }
+    @include m.desktop_2304 {
+        height: 91%;    
+    }
+    @include m.desktop_2560 {
+        height: 82%;
+    }
+}
+
+.left_logo {
+    background-color: green;
+    display: flex;
+    justify-content: flex-start;
+    transform: scale(.7);
+    background: center/contain no-repeat url(../img/logo-en-blanco.webp);
+    @include m.desktop_1280 {
+        transform: scale(.6);
+    }
+}
+
+.left_svg {
+    background-color: yellow;
+    transform: scale(.9);
+    background: center/contain no-repeat url(../img/gracias_desktop.svg);
+    @include m.desktop_1280 {
+        margin-top: 3rem;
+        transform: scale(.95);
+    }
+}
+
+.left_parraf {
+    // background-color: blue;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    @include m.desktop_1280 {
+        padding: 0 5rem;
+    }
+    @include m.desktop_1360 {
+        padding: 0 7rem;    
+    }
+    @include m.desktop_1440 {
+        padding: 0 9rem;
+    }
+    @include m.desktop_1920 {
+        padding: 0 10rem;
+    }
+    h3 {
+        margin: 0;
+        font-size: 2.2rem;
+        font-family: v.$fuente_wsMedium;
+        line-height: 1.5;
+        text-align: center;
+        color: white;
+        @include m.desktop_1280 {
+            font-size: 2.5rem;
+        }
+        @include m.desktop_1440 {
+            font-size: 2.7rem;
+        }
+        @include m.desktop_1920 {
+            @include m.height_1080 {
+                font-size: 3rem;
+            }
+        }
+        @include m.desktop_2240 {
+            font-size: 3.5rem;    
+        }
+        @include m.desktop_2304 {
+            font-size: 4rem;
+        }
+        @include m.desktop_2560 {
+            font-size: 4.3rem;
+        }
+    }
+}
+
+.left_button {
+    // background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @include m.desktop_1360 {
+        align-items: flex-start;
+    }
+}
+
+.left_button_bottom {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 0 .5rem 0 1.2rem;
+    border: none;
+    background-color: v.$secundario;
+    border-radius: .7rem;
+    width: 78%;
+    height: 63%;
+    cursor: pointer;
+    @include m.desktop_1280 {
+        padding: 0 1rem 0 2.5rem;
+        width: 65%;
+        height: 60%;
+    }
+    @include m.desktop_1360 {
+        width: 60%;
+        padding: 0 1rem 0 2rem;
+    }
+    @include m.desktop_1920 {
+        padding: 0 1rem 0 1.5rem;
+        width: 55%;
+    }
+    @include m.desktop_2240 {
+        padding: 0 1rem 0 2.5rem;
+    }
+    @include m.desktop_2304 {
+        width: 65%;
+    }
+    .descriptionButton__text {
+        h3 {
+            font-size: 1.6rem;
+            @include m.desktop_1360 {
+                font-size: 1.7rem;
+            }
+            @include m.desktop_1440 {
+                font-size: 1.9rem;
+            }
+            @include m.desktop_2240 {
+                font-size: 2.2rem;
+            }
+            @include m.desktop_2304 {
+                font-size: 2.7rem;
+            }
+            @include m.desktop_2560 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+.graciasDesktopContainer__right {
+    background-color: yellow;
+    position: relative;
+    left: -10rem;
+    z-index: -1;
+    img {
+        width: 120%;
+        height: 100%;
+    }
+}
+

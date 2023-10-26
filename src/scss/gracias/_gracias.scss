@@ -34,6 +34,9 @@
     @include m.phone_ios12pro_428 {
         height: 45rem;
     }
+    @include m.phone_480 {
+        height: 50rem;    
+    }
     @include m.tablet_760 {
         height: 60rem !important;
     }
@@ -63,6 +66,9 @@
     @include m.phone_360 {
         top: -10rem;
         height: 37rem;
+    }
+    @include m.phone_480 {
+        height: 43rem;
     }
     @include m.tablet_800 {
         height: 61.5rem !important;

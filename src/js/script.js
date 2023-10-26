@@ -8,6 +8,13 @@ window.addEventListener("load", () => {
     let imageContainer = document.querySelector('.graciasImage');
     let altura = screen.height;
     console.log(altura);
+    if( screen.height >= 640 ) {
+        logo.style.top = '2.5rem';
+        graciasText.style.top = '9rem';
+        graciasButton.style.bottom = '6rem';
+        graciasParrafo.style.top = '14rem';
+        imageContainer.style.top = '-15rem';
+    }
     if( screen.height >= 780 ){
         graciasContainer.style.height = '82%';
         logo.style.top = '3.5rem';
